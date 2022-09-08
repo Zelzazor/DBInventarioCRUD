@@ -59,6 +59,7 @@
             this.btnDelete.TabIndex = 30;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnCancel
             // 
@@ -69,6 +70,7 @@
             this.btnCancel.TabIndex = 29;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnSave
             // 
@@ -79,6 +81,7 @@
             this.btnSave.TabIndex = 28;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnAdd
             // 
@@ -100,6 +103,7 @@
             this.dataGridContactType.ReadOnly = true;
             this.dataGridContactType.Size = new System.Drawing.Size(776, 431);
             this.dataGridContactType.TabIndex = 31;
+            this.dataGridContactType.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridContactType_CellDoubleClick);
             // 
             // txtName
             // 

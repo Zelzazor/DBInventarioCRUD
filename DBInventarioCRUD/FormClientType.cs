@@ -57,5 +57,58 @@ namespace DBInventarioCRUD
 
             AddClientType(clientType);
         }
+
+        private void dataGridClientType_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex < 0 || dataGridClientType.Rows[e.RowIndex].Cells[0].Value == null) return;
+
+            bool parse = int.TryParse(dataGridClientType.Rows[e.RowIndex].Cells[0].Value.ToString(), out int id);
+            if (!parse) return;
+
+            var clientType = db.ClientType.Where(x => x.id == id).FirstOrDefault();
+
+            txtName.Text = clientType.Name;
+            txtDescription.Text = clientType.Description;
+
+            this.id = id;
+
+            btnAdd.Enabled = false;
+            btnSave.Enabled = true;
+            btnCancel.Enabled = true;
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+             UpdateForm();
+             btnAdd.Enabled = true;
+             btnSave.Enabled = false;
+             btnCancel.Enabled = false;
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            var clientType = db.ClientType.FirstOrDefault(x => x.id == this.id);
+            if (clientType == null) return;
+            clientType.Name = txtName.Text;
+            clientType.Description = txtDescription.Text;
+
+            db.SaveChanges();
+
+            UpdateForm();
+            btnAdd.Enabled = true;
+            btnSave.Enabled = false;
+            btnCancel.Enabled = false;
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            db.ClientType.Remove(db.ClientType.SingleOrDefault(x => x.id == this.id));
+            db.SaveChanges();
+
+            UpdateForm();
+            btnAdd.Enabled = true;
+            btnSave.Enabled = false;
+            btnCancel.Enabled = false;
+        }
     }
 }
