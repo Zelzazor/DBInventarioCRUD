@@ -182,5 +182,17 @@ namespace DBInventarioCRUD
             btnSave.Enabled = false;
             btnCancel.Enabled = false;
         }
+
+        private void btnClientType_Click(object sender, EventArgs e)
+        {
+            Form form = new FormClientType();
+            form.Show();
+        }
+
+        private void btnContactType_Click(object sender, EventArgs e)
+        {
+            Form form = new FormContactType();
+            form.Show();
+        }
     }
 }

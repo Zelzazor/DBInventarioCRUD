@@ -54,6 +54,8 @@
             this.cbDepartment = new System.Windows.Forms.ComboBox();
             this.dataGridPerson = new System.Windows.Forms.DataGridView();
             this.btnDelete = new System.Windows.Forms.Button();
+            this.btnClientType = new System.Windows.Forms.Button();
+            this.btnContactType = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridPerson)).BeginInit();
             this.SuspendLayout();
             // 
@@ -288,11 +290,33 @@
             this.btnDelete.UseVisualStyleBackColor = true;
             this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
+            // btnClientType
+            // 
+            this.btnClientType.Location = new System.Drawing.Point(17, 571);
+            this.btnClientType.Name = "btnClientType";
+            this.btnClientType.Size = new System.Drawing.Size(75, 23);
+            this.btnClientType.TabIndex = 27;
+            this.btnClientType.Text = "Client Type";
+            this.btnClientType.UseVisualStyleBackColor = true;
+            this.btnClientType.Click += new System.EventHandler(this.btnClientType_Click);
+            // 
+            // btnContactType
+            // 
+            this.btnContactType.Location = new System.Drawing.Point(99, 570);
+            this.btnContactType.Name = "btnContactType";
+            this.btnContactType.Size = new System.Drawing.Size(93, 23);
+            this.btnContactType.TabIndex = 28;
+            this.btnContactType.Text = "Contact Type";
+            this.btnContactType.UseVisualStyleBackColor = true;
+            this.btnContactType.Click += new System.EventHandler(this.btnContactType_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 606);
+            this.Controls.Add(this.btnContactType);
+            this.Controls.Add(this.btnClientType);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.dataGridPerson);
             this.Controls.Add(this.cbDepartment);
@@ -355,6 +379,8 @@
         private System.Windows.Forms.ComboBox cbDepartment;
         private System.Windows.Forms.DataGridView dataGridPerson;
         private System.Windows.Forms.Button btnDelete;
+        private System.Windows.Forms.Button btnClientType;
+        private System.Windows.Forms.Button btnContactType;
     }
 }
 

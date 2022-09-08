@@ -73,6 +73,18 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormClientType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormClientType.Designer.cs">
+      <DependentUpon>FormClientType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormContactType.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormContactType.Designer.cs">
+      <DependentUpon>FormContactType.cs</DependentUpon>
+    </Compile>
     <Compile Include="License.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -114,6 +126,12 @@
     <Compile Include="Utils.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormClientType.resx">
+      <DependentUpon>FormClientType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormContactType.resx">
+      <DependentUpon>FormContactType.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
